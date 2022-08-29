@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +22,20 @@
     --box-shadow: 0 3px 15px rgba(0,0,0,.3);
 }
 
+.light-mode {
+    --color-primary: #ffffff;
+    --color-secondary: #D75281;
+    --color-white: #454e56;
+    --color-black: #000;
+    --color-grey0: #f8f8f8;
+    --color-grey1: #6c7983;
+    --color-grey2: #6c7983;
+    --color-grey3: #6c7983;
+    --color-grey4: #454e56;
+    --color-grey5: #f8f8f8;
+    --color-grey6: #12181b;
+}
+
 body {
     background-color: var(--color-primary);
     font-family: 'Poppins', sans-serif;
@@ -37,7 +52,8 @@ a {
 }
 
 header {
-    height: 100vh;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
     color: var(--color-white);
     overflow: hidden;
 }
@@ -123,13 +139,60 @@ section {
             pointer-events: none;
         }
     }
+
+    
+}
+
+// theme
+
+.theme-btn {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--color-grey4);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .7rem 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,.2);
+    i {
+        font-size: 1.2rem;
+        color: var(--color-grey2);
+        pointer-events: none;
+    }
+}
+
+.theme-btn {
+    top: 5%;
+    right: 3%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-grey4);
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,.3);
+    transition: all .1s ease-in-out;
+    &:active {
+        transform: translateY(-3px);
+    }
+    i {
+        font-size: 1.4rem;
+        color: var(--color-grey2);
+        pointer-events: none;
+    }
 }
 
 // header-content
 .header-content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100%;
+    min-height: 100vh;
     .left-header {
         display: flex;
         align-items: center;
@@ -393,12 +456,6 @@ section {
     padding-top: 3.5rem;
     .left-contact {
         flex: 2;
-        h4 {
-            margin-top: 1rem;
-            margin-bottom: 2.5rem;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-        }
         p {
             margin: 1rem 0;
             line-height: 2rem;
@@ -543,3 +600,5 @@ section {
         }
     }
 }
+
+@import './media';
