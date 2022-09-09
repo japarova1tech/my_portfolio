@@ -539,6 +539,21 @@ section {
         .submit-btn {
             display: flex;
             justify-content: flex-start;
+            .btn-snd {
+                padding: 0.5rem 4rem;
+                border-radius: 30px;
+                font-weight: 600;
+                color: inherit;
+                position: relative;
+                border: 1px solid var(--color-secondary);
+                color: inherit;
+                background-color: inherit;
+                &:hover {
+                    background-color: var(--color-secondary);
+                    
+                }
+            }
+            
         }
     }
 }

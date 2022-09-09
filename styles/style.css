@@ -537,6 +537,19 @@ section {
   display: flex;
   justify-content: flex-start;
 }
+.contact-content-con .right-contact .submit-btn .btn-snd {
+  padding: 0.5rem 4rem;
+  border-radius: 30px;
+  font-weight: 600;
+  color: inherit;
+  position: relative;
+  border: 1px solid var(--color-secondary);
+  color: inherit;
+  background-color: inherit;
+}
+.contact-content-con .right-contact .submit-btn .btn-snd:hover {
+  background-color: var(--color-secondary);
+}
 
 .btn-con {
   display: flex;
@@ -671,9 +684,6 @@ section {
 @media screen and (max-width: 1432px) {
   header {
     padding: 0 !important;
-  }
-  .container {
-    padding: 7rem 11rem;
   }
   .contact-content-con {
     flex-direction: column;
